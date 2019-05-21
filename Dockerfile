@@ -10,4 +10,6 @@ RUN antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 RUN chmod 0700 ~/.local/share/chezmoi
 RUN chezmoi apply
 
+RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 CMD /usr/bin/zsh
