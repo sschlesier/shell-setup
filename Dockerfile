@@ -11,5 +11,6 @@ RUN chmod 0700 ~/.local/share/chezmoi
 RUN chezmoi apply
 
 RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+RUN nvim +PluginInstall +qall
 
 CMD /usr/bin/zsh
