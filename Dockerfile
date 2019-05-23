@@ -1,6 +1,6 @@
 FROM fedora
 
-RUN dnf -y install neovim python3 ddgr zsh git wget python
+RUN dnf -y install neovim python3 ddgr zsh git wget python tmux
 
 RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 RUN nvim +PluginInstall +qall
