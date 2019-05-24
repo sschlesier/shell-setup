@@ -1,4 +1,4 @@
 #! /bin/bash
-TARGET=$(realpath .local/share/chezmoi)
-find $TARGET -mindepth 1 -delete 
-chezmoi source archive -- master | tar -x -C $TARGET
+rm -rf .local/
+mkdir -p .local/share/chezmoi
+chezmoi source archive -- master | tar -x -C .local/share/chezmoi

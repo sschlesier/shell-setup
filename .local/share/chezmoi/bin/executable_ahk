@@ -1,3 +1,0 @@
-#! /usr/bin/env bash
-
-vim $WIN_HOME/Dropbox/AHK/startup.ahk
