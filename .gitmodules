@@ -1,3 +1,0 @@
-[submodule ".local/share/chezmoi"]
-	path = .local/share/chezmoi
-	url = /Users/scotts/Dropbox/gitrepo/chezmoi.git
