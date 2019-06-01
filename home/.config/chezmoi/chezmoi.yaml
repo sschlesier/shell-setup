@@ -1,6 +1,5 @@
 data:
   email: sschlesier@gmail.com
-  term: xterm-256color
   launch_tmux: ""
   insecure_docker: ""
   cred_helper: "cache"
