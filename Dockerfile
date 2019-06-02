@@ -1,6 +1,6 @@
 FROM fedora
 
-RUN dnf -y install neovim python3 ddgr zsh git wget python tmux unzip
+RUN dnf -y install neovim python3 ddgr zsh git wget python tmux unzip fzf fd-find
 ENV TERM=xterm-256color
 RUN sed -i 's/\/bin\/bash$/\/usr\/bin\/zsh/' /etc/passwd
 
@@ -17,7 +17,6 @@ COPY home/.local/share/chezmoi/private_dot_config/nvim/init.vim /root/.config/nv
 RUN nvim +PluginInstall +qall
 
 COPY home/ /root
-# RUN mv /root/antibody /usr/local/bin && mv /root/chezmoi /usr/local/bin/
 
 RUN chmod 0700 /root/.local/share/chezmoi
 RUN chezmoi apply
