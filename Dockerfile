@@ -7,9 +7,9 @@ RUN sed -i 's/\/bin\/bash$/\/usr\/bin\/zsh/' /etc/passwd
 RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 #hack to improve build times pre-build shell plugins
-COPY home/.local/share/chezmoi/dot_zsh_plugins.txt /root/.zsh_plugins.txt
+COPY home/.local/share/chezmoi/dot_zsh/zsh_plugins.txt /root/.zsh/zsh_plugins.txt
 COPY ulb/ /usr/local/bin
-RUN antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+RUN antibody bundle < ~/.zsh/zsh_plugins.txt #ensure files are cached
 
 #hack to improve build times pre-build vim plugins
 COPY home/.local/share/chezmoi/dot_vimrc /root/.vimrc
