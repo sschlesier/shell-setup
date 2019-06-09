@@ -17,6 +17,7 @@ COPY home/.local/share/chezmoi/private_dot_config/nvim/init.vim /root/.config/nv
 RUN nvim +PluginInstall +qall
 
 COPY home/ /root
+RUN echo "export EMAIL=scott+tst@schlesier.ca" > ~/.zsh/shell_environment.zsh #hack in shell_environment
 
 RUN chmod 0700 /root/.local/share/chezmoi
 RUN chezmoi apply
