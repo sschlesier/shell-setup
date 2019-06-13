@@ -1,6 +1,6 @@
 FROM fedora
 
-RUN dnf -y install neovim python3 ddgr zsh git wget python tmux unzip fzf fd-find the_silver_searcher ruby
+RUN dnf -y install neovim python3 ddgr zsh git wget python tmux unzip fzf fd-find the_silver_searcher ruby exa
 ENV TERM=xterm-256color
 RUN sed -i 's/\/bin\/bash$/\/usr\/bin\/zsh/' /etc/passwd
 
