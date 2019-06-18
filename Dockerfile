@@ -5,15 +5,21 @@ ENV TERM=xterm-256color
 RUN sed -i 's/\/bin\/bash$/\/usr\/bin\/zsh/' /etc/passwd
 
 #hack to improve build times pre-build shell plugins
-COPY home/.local/share/chezmoi/dot_zsh/zsh_plugins.txt /root/.zsh/zsh_plugins.txt
+COPY home/.local/share/chezmoi/dot_zsh/pre_compinit_plugins.txt /root/.zsh/pre_compinit_plugins.txt
+COPY home/.local/share/chezmoi/dot_zsh/post_compinit_plugins.txt /root/.zsh/post_compinit_plugins.txt
 COPY ulb/ /usr/local/bin
-RUN antibody bundle < ~/.zsh/zsh_plugins.txt #ensure files are cached
+#ensure files are cached
+RUN antibody bundle < ~/.zsh/pre_compinit_plugins.txt && \
+    antibody bundle < ~/.zsh/post_compinit_plugins.txt
 
 #hack to improve build times pre-build vim plugins
 COPY home/.local/share/chezmoi/dot_vimrc /root/.vimrc
 COPY home/.local/share/chezmoi/private_dot_config/nvim/init.vim /root/.config/nvim/init.vim
-COPY home/.local/share/chezmoi/dot_vim/autoload/plug.vim /root/.vim/autoload/plug.vim
-RUN nvim +PlugInstall +qall
+COPY home/.local/share/chezmoi/bin/executable_update_all_plugins /root/bin/update_all_plugins
+RUN mkdir -p /root/.vim/autoload && \
+    wget -O - https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > /root/.vim/autoload/plug.vim && \
+    chmod +x /root/bin/* && \
+    /root/bin/update_all_plugins
 
 COPY home/ /root
 RUN echo "export EMAIL=scott+tst@schlesier.ca" > ~/.zsh/shell_environment.zsh #hack in shell_environment
