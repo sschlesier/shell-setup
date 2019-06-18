@@ -4,8 +4,6 @@ RUN dnf -y install neovim python3 ddgr zsh git wget python tmux unzip fzf fd-fin
 ENV TERM=xterm-256color
 RUN sed -i 's/\/bin\/bash$/\/usr\/bin\/zsh/' /etc/passwd
 
-RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
 #hack to improve build times pre-build shell plugins
 COPY home/.local/share/chezmoi/dot_zsh/zsh_plugins.txt /root/.zsh/zsh_plugins.txt
 COPY ulb/ /usr/local/bin
@@ -14,7 +12,8 @@ RUN antibody bundle < ~/.zsh/zsh_plugins.txt #ensure files are cached
 #hack to improve build times pre-build vim plugins
 COPY home/.local/share/chezmoi/dot_vimrc /root/.vimrc
 COPY home/.local/share/chezmoi/private_dot_config/nvim/init.vim /root/.config/nvim/init.vim
-RUN nvim +PluginInstall +qall
+COPY home/.local/share/chezmoi/dot_vim/autoload/plug.vim /root/.vim/autoload/plug.vim
+RUN nvim +PlugInstall +qall
 
 COPY home/ /root
 RUN echo "export EMAIL=scott+tst@schlesier.ca" > ~/.zsh/shell_environment.zsh #hack in shell_environment
