@@ -1,33 +1,41 @@
-FROM fedora
-
-RUN dnf -y install neovim python3 ddgr zsh git wget python tmux unzip fzf fd-find the_silver_searcher ruby exa hyperfine
-ENV TERM=xterm-256color
-RUN sed -i 's/\/bin\/bash$/\/usr\/bin\/zsh/' /etc/passwd
+FROM fedora as BASE
+RUN dnf -y install neovim zsh git wget tmux unzip
+COPY ulb/ /usr/local/bin
+RUN chmod +x /usr/local/bin/*
 
 #improve build times pre-build shell plugins
+from BASE as Antibody
 COPY home/.local/share/chezmoi/dot_zsh/pre_compinit_plugins.txt /root/.zsh/pre_compinit_plugins.txt
 COPY home/.local/share/chezmoi/dot_zsh/post_compinit_plugins.txt /root/.zsh/post_compinit_plugins.txt
-COPY ulb/ /usr/local/bin
-#ensure files are cached
 RUN antibody bundle < ~/.zsh/pre_compinit_plugins.txt && \
     antibody bundle < ~/.zsh/post_compinit_plugins.txt
 
 #improve build times pre-build vim plugins
+from BASE as VimPlug
 COPY home/.local/share/chezmoi/dot_vimrc /root/.vimrc
 COPY home/.local/share/chezmoi/private_dot_config/nvim/init.vim /root/.config/nvim/init.vim
-COPY home/.local/share/chezmoi/bin/executable_update_all_plugins /root/bin/update_all_plugins
 RUN mkdir -p /root/.vim/autoload && \
-    wget -O - https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > /root/.vim/autoload/plug.vim && \
-    chmod +x /root/bin/* && \
-    /root/bin/update_all_plugins
+    wget -O - https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > /root/.vim/autoload/plug.vim
+RUN nvim +PlugUpdate +qall
 
 #improve build times pre-build tmux plugins
-RUN git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+from BASE as Tpm
+ENV TMUX_PLUGIN_MANAGER_PATH=/root/.tmux/plugins
+RUN git clone https://github.com/tmux-plugins/tpm "$TMUX_PLUGIN_MANAGER_PATH/tpm"
 COPY home/.local/share/chezmoi/dot_tmux.conf /root/.tmux.conf
-RUN tmux new-session -d "~/.tmux/plugins/tpm/bindings/install_plugins; exit"
+RUN /root/.tmux/plugins/tpm/bin/install_plugins
 
+from BASE as final
+RUN dnf -y install neovim python3 ddgr zsh git wget python tmux unzip fzf fd-find the_silver_searcher ruby exa hyperfine
+COPY --from=Antibody /root/.cache/antibody /root/.cache/antibody
+COPY --from=VimPlug /root/.vim/plugged /root/.vim/plugged
+COPY --from=Tpm /root/.tmux /root/.tmux
+
+ENV TERM=xterm-256color
+RUN sed -i 's/\/bin\/bash$/\/usr\/bin\/zsh/' /etc/passwd
 COPY home/ /root
-RUN echo "export EMAIL=scott+tst@schlesier.ca" > ~/.zsh/shell_environment.zsh #hack in shell_environment
+RUN mkdir -p /root/.zsh && \
+    echo "export EMAIL=scott+tst@schlesier.ca" > ~/.zsh/shell_environment.zsh #hack in shell_environment
 
 RUN chmod 0700 /root/.local/share/chezmoi
 RUN chezmoi apply
