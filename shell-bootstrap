@@ -1,0 +1,23 @@
+#! /usr/bin/env sh
+
+if type dnf > /dev/null; then
+  dnf -y install \
+	  ddgr \
+	  exa \
+	  fd-find \
+	  fzf \
+	  git \
+	  hyperfine \
+	  neovim \
+	  python \
+	  python3 \
+	  ruby \
+	  the_silver_searcher \
+	  tmux \
+	  unzip \
+	  wget \
+	  zsh 
+else
+  echo only dnf based systems supported
+  exit 1
+fi
