@@ -1,0 +1,7 @@
+#! /usr/bin/env sh
+
+curl -sfL https://git.io/chezmoi | sh
+mkdir -p /root/.zsh
+echo "export EMAIL=scott+tst@schlesier.ca" > ~/.zsh/shell_environment.zsh
+sed -i 's/\/bin\/bash$/\/usr\/bin\/zsh/' /etc/passwd
+chezmoi apply

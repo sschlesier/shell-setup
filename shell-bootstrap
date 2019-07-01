@@ -16,7 +16,7 @@ if type dnf > /dev/null; then
 	  tmux \
 	  unzip \
 	  wget \
-	  zsh 
+	  zsh
 else
   echo only dnf based systems supported
   exit 1

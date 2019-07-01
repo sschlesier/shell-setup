@@ -1,0 +1,7 @@
+#! /usr/bin/env sh
+
+export TMUX_PLUGIN_MANAGER_PATH="$HOME/.tmux/plugins"
+mkdir -p "$TMUX_PLUGIN_MANAGER_PATH"
+git clone https://github.com/tmux-plugins/tpm "$TMUX_PLUGIN_MANAGER_PATH/tpm"
+"$TMUX_PLUGIN_MANAGER_PATH/tpm/bin/install_plugins"
+
