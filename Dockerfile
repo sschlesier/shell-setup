@@ -1,4 +1,4 @@
-FROM fedora
+FROM ubuntu
 ENV TERM=xterm-256color
 CMD /usr/bin/zsh
 

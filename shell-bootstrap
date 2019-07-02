@@ -17,7 +17,39 @@ if type dnf > /dev/null; then
 	  unzip \
 	  wget \
 	  zsh
+elif type apt-get > /dev/null; then
+  apt-get update
+  apt-get install -y \
+	  curl \
+	  ddgr \
+	  git \
+	  neovim \
+	  python \
+	  python3 \
+	  ruby \
+  	  silversearcher-ag \
+	  tmux \
+	  unzip \
+	  wget \
+	  zsh
+
+  wget https://github.com/sharkdp/fd/releases/download/v7.3.0/fd-musl_7.3.0_amd64.deb
+  dpkg -i fd-musl_7.3.0_amd64.deb
+  rm $_
+
+  wget https://github.com/sharkdp/hyperfine/releases/download/v1.6.0/hyperfine_1.6.0_amd64.deb
+  dpkg -i hyperfine_1.6.0_amd64.deb
+  rm $_
+
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install
+
+  wget https://github.com/ogham/exa/releases/download/v0.8.0/exa-linux-x86_64-0.8.0.zip
+  unzip exa-linux-x86_64-0.8.0.zip
+  mv exa-linux-x86_64 /usr/local/bin/exa
+  chmod +x $_
+  rm exa-linux-x86_64-0.8.0.zip
 else
-  echo only dnf based systems supported
+  echo only dnf and apt based systems supported so far
   exit 1
 fi
