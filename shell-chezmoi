@@ -5,3 +5,6 @@ mkdir -p /root/.zsh
 echo "export EMAIL=scott+tst@schlesier.ca" > ~/.zsh/shell_environment.zsh
 sed -i 's/\/bin\/bash$/\/usr\/bin\/zsh/' /etc/passwd
 chezmoi apply
+
+curl -o ~/bin/tldr https://raw.githubusercontent.com/raylee/tldr/master/tldr
+chmod +x ~/bin/tldr
