@@ -1,7 +1,7 @@
 #! /usr/bin/env sh
 
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/bare-script/shell-bootstrap | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/bare-script/shell-chezmoi | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/bare-script/shell-antibody | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/bare-script/shell-vimplug | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/bare-script/shell-tmux | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-bootstrap | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-chezmoi | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-antibody | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-vimplug | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-tmux | sh
