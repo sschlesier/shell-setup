@@ -17,7 +17,23 @@ if type dnf > /dev/null; then
 	  unzip \
 	  wget \
 	  zsh
+elif type apk > /dev/null; then
+  apk update
+  apk add \
+	  curl \
+	  fzf \
+	  git \
+	  neovim \
+	  python \
+	  python3 \
+	  ruby \
+	  the_silver_searcher \
+	  tmux \
+	  unzip \
+	  wget \
+	  zsh
+  apk add
 else
-  echo only dnf based systems supported
+  echo only dnf and apk based systems supported so far
   exit 1
 fi

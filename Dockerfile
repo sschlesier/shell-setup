@@ -1,4 +1,4 @@
-FROM fedora
+FROM alpine
 ENV TERM=xterm-256color
 CMD /usr/bin/zsh
 
