@@ -1,10 +1,13 @@
 #! /usr/bin/env sh
 
 curl -sfL https://git.io/chezmoi | sh
-mkdir -p /root/.zsh
-echo "export EMAIL=scott+tst@schlesier.ca" > ~/.zsh/shell_environment.zsh
-sed -i 's/\/bin\/bash$/\/usr\/bin\/zsh/' /etc/passwd
+chezmoi init https://github.com/sschlesier/dotfiles-chezmoi.git
 chezmoi apply
+
+echo "export EMAIL=scott+tst@schlesier.ca" > ~/.zsh/shell_environment.zsh
+
+#hacky way to get zsh, assumes root in docker for now
+sed -i 's/\/bin\/bash$/\/usr\/bin\/zsh/' /etc/passwd
 
 curl -o ~/bin/tldr https://raw.githubusercontent.com/raylee/tldr/master/tldr
 chmod +x ~/bin/tldr
