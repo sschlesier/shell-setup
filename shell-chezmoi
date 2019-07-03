@@ -1,13 +1,8 @@
-#! /usr/bin/env sh
-
-curl -sfL https://git.io/chezmoi | sh
-chezmoi init https://github.com/sschlesier/dotfiles-chezmoi.git
-chezmoi apply
+curl -sfL https://git.io/chezmoi | sh -s - -b ~/bin
+~/bin/chezmoi init https://github.com/sschlesier/dotfiles-chezmoi.git
+~/bin/chezmoi apply
 
 echo "export EMAIL=scott+tst@schlesier.ca" > ~/.zsh/shell_environment.zsh
 
-#hacky way to get zsh, assumes root in docker for now
-sed -i 's/\/bin\/bash$/\/usr\/bin\/zsh/' /etc/passwd
-
-curl -o ~/bin/tldr https://raw.githubusercontent.com/raylee/tldr/master/tldr
-chmod +x ~/bin/tldr
+#create ~/.ssh so ssh-agent doesn't whine
+mkdir -p ~/.ssh

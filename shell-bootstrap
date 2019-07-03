@@ -17,6 +17,9 @@ if type dnf > /dev/null; then
 	  unzip \
 	  wget \
 	  zsh
+
+  dnf -y module install \
+	  bat
 else
   echo only dnf based systems supported
   exit 1

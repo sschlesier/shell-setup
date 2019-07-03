@@ -1,18 +1,25 @@
 FROM fedora
-ENV TERM=xterm-256color
 CMD /usr/bin/zsh
+ENV TERM=xterm-256color
 
-COPY shell-bootstrap /root/
-RUN chmod +x /root/shell-bootstrap && /root/shell-bootstrap
+RUN useradd --create-home --shell /usr/bin/zsh user
+WORKDIR /home/user
 
-COPY shell-chezmoi /root/
-RUN chmod +x /root/shell-chezmoi && /root/shell-chezmoi
+COPY shell-bootstrap .
+RUN ./shell-bootstrap
 
-COPY shell-antibody /root/
-RUN chmod +x /root/shell-antibody && /root/shell-antibody
+USER user
+COPY shell-chezmoi .
+RUN ./shell-chezmoi
 
-COPY shell-vimplug /root/
-RUN chmod +x /root/shell-vimplug && /root/shell-vimplug
+COPY shell-antibody .
+RUN ./shell-antibody
 
-COPY shell-tmux /root/
-RUN chmod +x /root/shell-tmux && /root/shell-tmux
+COPY shell-vimplug .
+RUN ./shell-vimplug
+
+COPY shell-tmux .
+RUN ./shell-tmux
+
+COPY shell-manual-install .
+RUN ./shell-manual-install
