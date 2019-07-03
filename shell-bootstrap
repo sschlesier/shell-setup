@@ -1,6 +1,6 @@
 #! /usr/bin/env sh
 
-if type dnf > /dev/null; then
+if type dnf > /dev/null 2>&1; then
   dnf -y install \
 	  ddgr \
 	  exa \
@@ -17,7 +17,30 @@ if type dnf > /dev/null; then
 	  unzip \
 	  wget \
 	  zsh
+elif type pacman > /dev/null; then
+  pacman -Sy
+  pacman -S --needed \
+	  base-devel \
+	  exa \
+	  fzf \
+	  git \
+	  neovim \
+	  python3 \
+	  ruby \
+	  the_silver_searcher \
+	  tmux \
+	  unzip \
+	  wget \
+	  yajl \
+	  zsh
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  makepkg -si
+  yay -S \
+    ddgr \
+    fd-rs \
+    hyperfine
 else
-  echo only dnf based systems supported
+  echo only dnf and pacman based systems supported
   exit 1
 fi
