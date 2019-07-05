@@ -2,22 +2,23 @@
 
 if type dnf > /dev/null; then
   dnf -y install \
-          ddgr \
+	  ddgr \
           dos2unix \
-          exa \
-          fd-find \
-          fzf \
-          git \
-          hyperfine \
-          neovim \
-          python \
-          python3 \
-          ruby \
-          the_silver_searcher \
-          tmux \
-          unzip \
-          wget \
-          zsh
+	  exa \
+	  fd-find \
+	  fzf \
+	  git \
+	  hyperfine \
+	  httpie \
+	  neovim \
+	  python \
+	  python3 \
+	  ruby \
+	  the_silver_searcher \
+	  tmux \
+	  unzip \
+	  wget \
+	  zsh
 
   dnf -y module install \
 	  bat
