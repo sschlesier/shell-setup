@@ -2,27 +2,34 @@
 
 if type dnf > /dev/null; then
   dnf -y install \
-	  ddgr \
-          dos2unix \
-	  exa \
-	  fd-find \
-	  fzf \
-	  git \
-	  hyperfine \
-	  httpie \
-	  neovim \
-	  python \
-	  python3 \
-	  ruby \
-	  the_silver_searcher \
-	  tmux \
-	  unzip \
-	  wget \
-	  zsh
+	ddgr \
+	dos2unix \
+	entr \
+	exa \
+	fd-find \
+	fzf \
+	git \
+	hyperfine \
+	httpie \
+	man \
+	neovim \
+	npm \
+	parallel \
+	python \
+	python3 \
+	ruby \
+	the_silver_searcher \
+	tmux \
+	unzip \
+	wget \
+	zsh
 
   dnf -y module install \
-	  bat
+	bat
+
+  npm install -g \
+	markserv
 else
-  echo only dnf based systems supported
-  exit 1
+	echo only dnf based systems supported
+	exit 1
 fi

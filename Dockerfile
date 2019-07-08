@@ -5,6 +5,9 @@ ENV TERM=xterm-256color
 RUN useradd --create-home --shell /usr/bin/zsh user
 WORKDIR /home/user
 
+# cache an updated set of repos
+RUN dnf makecache
+
 COPY shell-bootstrap .
 RUN ./shell-bootstrap
 
@@ -23,3 +26,5 @@ RUN ./shell-tmux
 
 COPY shell-manual-install .
 RUN ./shell-manual-install
+
+RUN rm -f shell*
