@@ -1,7 +1,7 @@
 #! /usr/bin/env sh
 
 if type dnf > /dev/null; then
-  dnf -y install \
+  sudo dnf -y install \
 	ddgr \
 	dos2unix \
 	entr \
@@ -24,10 +24,10 @@ if type dnf > /dev/null; then
 	wget \
 	zsh
 
-  dnf -y module install \
+  sudo dnf -y module install \
 	bat
 
-  npm install -g \
+  sudo npm install -g \
 	markserv
 else
 	echo only dnf based systems supported
