@@ -1,4 +1,4 @@
-#! /usr/bin/env sh
+#! /usr/bin/env zsh
 
 curl -sfL git.io/antibody | sh -s - -b ~/bin
 ~/bin/antibody bundle < ~/.zsh/pre_compinit_plugins.txt

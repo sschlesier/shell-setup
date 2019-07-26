@@ -2,7 +2,7 @@
 
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-bootstrap | sh
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-chezmoi | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-antibody | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-vimplug | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-tmux | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-manual-install | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-antibody | zsh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-vimplug | zsh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-tmux | zsh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-manual-install | zsh
