@@ -1,6 +1,9 @@
 #! /usr/bin/env sh
 
 if type dnf > /dev/null; then
+  sudo dnf -y group install \
+	Core
+
   sudo dnf -y install \
 	ddgr \
 	dos2unix \
