@@ -11,3 +11,7 @@ chmod +x ~/bin/bombardier
 #setup defaault ssh params
 curl -o ~/.ssh/config https://gist.githubusercontent.com/sschlesier/128b3c59ed82034d2fc983ecabdfb4ea/raw/config
 chmod 644 ~/.ssh/config
+
+#install grv
+wget -O ~/bin/grv https://github.com/rgburke/grv/releases/download/v0.3.2/grv_v0.3.2_linux64
+chmod +x ~/bin/grv
