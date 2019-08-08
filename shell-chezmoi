@@ -1,5 +1,5 @@
 curl -sfL https://git.io/chezmoi | sh -s - -b ~/bin
-~/bin/chezmoi init https://github.com/sschlesier/dotfiles-chezmoi.git
+~/bin/chezmoi init git@github.com:sschlesier/dotfiles-chezmoi.git
 ~/bin/chezmoi apply
 
 cp ~/.zsh/shell_environment_template ~/.zsh/shell_environment.zsh

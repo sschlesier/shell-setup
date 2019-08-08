@@ -5,7 +5,6 @@ if type dnf > /dev/null; then
 	Core
 
   sudo dnf -y install \
-	ddgr \
 	dos2unix \
 	entr \
 	exa \
