@@ -1,5 +1,5 @@
 #! /usr/bin/env zsh
 
-curl -sfL git.io/antibody | sh -s - -b ~/bin
+curl -sfL https://git.io/antibody | sh -s - -b ~/bin
 ~/bin/antibody bundle < ~/.zsh/pre_compinit_plugins.txt
 ~/bin/antibody bundle < ~/.zsh/post_compinit_plugins.txt
