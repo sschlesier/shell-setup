@@ -1,17 +1,26 @@
 #! /usr/bin/env zsh
 
 #install a tldr instance
-curl --location --output ~/bin/tldr https://raw.githubusercontent.com/raylee/tldr/master/tldr
+curl --fail --silent --show-error --location \
+	--output ~/bin/tldr https://raw.githubusercontent.com/raylee/tldr/master/tldr
 chmod +x ~/bin/tldr
 
 #bombardier
-curl --location --output ~/bin/bombardier https://github.com/codesenberg/bombardier/releases/download/v1.2.4/bombardier-linux-amd64
+curl --fail --silent --show-error --location \
+	--output ~/bin/bombardier https://github.com/codesenberg/bombardier/releases/download/v1.2.4/bombardier-linux-amd64
 chmod +x ~/bin/bombardier
 
 #setup defaault ssh params
-curl --location --output ~/.ssh/config https://gist.githubusercontent.com/sschlesier/128b3c59ed82034d2fc983ecabdfb4ea/raw/config
+curl --fail --silent --show-error --location \
+	--output ~/.ssh/config https://gist.githubusercontent.com/sschlesier/128b3c59ed82034d2fc983ecabdfb4ea/raw/config
 chmod 644 ~/.ssh/config
 
 #install grv
-wget -O ~/bin/grv https://github.com/rgburke/grv/releases/download/v0.3.2/grv_v0.3.2_linux64
+curl --fail --silent --show-error --location \
+	--output ~/bin/grv https://github.com/rgburke/grv/releases/download/v0.3.2/grv_v0.3.2_linux64
 chmod +x ~/bin/grv
+
+#install docker cli
+curl --fail --silent --show-error --location \
+	https://download.docker.com/linux/static/stable/x86_64/docker-19.03.2.tgz | \
+	tar -zxvf - --strip 1 -C ~/bin docker/docker
