@@ -18,6 +18,7 @@ if type dnf > /dev/null; then
 	neovim \
 	npm \
 	parallel \
+	plantuml \
 	python \
 	python3 \
 	ruby \
@@ -32,7 +33,6 @@ if type dnf > /dev/null; then
 
   sudo npm install -g \
 	markserv \
-	fx \
 	log-color-highlight
 else
 	echo only dnf based systems supported
