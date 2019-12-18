@@ -5,6 +5,7 @@ if type dnf > /dev/null; then
 	Core
 
   sudo dnf -y install \
+	bind-utils \
 	dos2unix \
 	entr \
 	exa \
