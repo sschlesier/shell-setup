@@ -33,8 +33,9 @@ if type dnf > /dev/null; then
 	bat
 
   sudo npm install -g \
+	log-color-highlight \
 	markserv \
-	log-color-highlight
+	npm-check
 else
 	echo only dnf based systems supported
 	exit 1
