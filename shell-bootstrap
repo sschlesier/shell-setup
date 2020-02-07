@@ -8,8 +8,8 @@ if type dnf > /dev/null; then
 	acpi \
 	bind-utils \
 	dos2unix \
-	entr \
 	exa \
+	file \
 	fd-find \
 	fzf \
 	git \
