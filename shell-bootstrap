@@ -19,6 +19,7 @@ if type dnf > /dev/null; then
 	man \
 	neovim \
 	npm \
+	p7zip-plugins \
 	parallel \
 	plantuml \
 	python python-pip \
