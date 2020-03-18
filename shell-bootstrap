@@ -41,7 +41,8 @@ if type dnf > /dev/null; then
 
   sudo pip3 install \
 	  visidata \
-	  openpyxl
+	  openpyxl \
+	  termdown
 else
 	echo only dnf based systems supported
 	exit 1
