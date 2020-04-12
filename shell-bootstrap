@@ -40,9 +40,8 @@ if type dnf > /dev/null; then
 	npm-check
 
   sudo pip3 install \
-	  visidata \
-	  openpyxl \
-	  termdown
+	  visidata openpyxl termdown \
+	  urwid urwid-readline #for jqed
 else
 	echo only dnf based systems supported
 	exit 1
