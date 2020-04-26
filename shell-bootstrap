@@ -12,6 +12,7 @@ if type dnf > /dev/null; then
 	file \
 	fd-find \
 	fzf \
+	gcc \
 	git \
 	hyperfine \
 	httpie \

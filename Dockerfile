@@ -24,6 +24,9 @@ RUN ./shell-vimplug
 COPY shell-tmux .
 RUN ./shell-tmux
 
+COPY shell-cargo .
+RUN ./shell-cargo
+
 COPY shell-manual-install .
 RUN ./shell-manual-install
 
