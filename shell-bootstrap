@@ -6,6 +6,7 @@ if type dnf > /dev/null; then
 
   sudo dnf -y install \
 	acpi \
+	bat \
 	bind-utils \
 	dos2unix \
 	exa \
@@ -31,9 +32,6 @@ if type dnf > /dev/null; then
 	unzip \
 	wget \
 	zsh
-
-  sudo dnf -y module install \
-	bat
 
   sudo npm install -g \
 	log-color-highlight \
