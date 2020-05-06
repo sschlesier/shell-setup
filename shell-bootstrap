@@ -19,6 +19,7 @@ if type dnf > /dev/null; then
 	httpie \
 	jq \
 	man \
+	moreutils \
 	neovim \
 	npm \
 	p7zip-plugins \
