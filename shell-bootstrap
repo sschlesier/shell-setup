@@ -1,49 +1,42 @@
 #! /usr/bin/env sh
 
-if type dnf > /dev/null; then
-  sudo dnf -y group install \
-	Core
-
-  sudo dnf -y install \
-	acpi \
+if type pkg > /dev/null; then
+  pkg install \
+	atool \
 	bat \
-	bind-utils \
-	dos2unix \
+	bombardier \
+	diff-so-fancy \
 	entr \
 	exa \
-	file \
 	fd-find \
+	file \
 	fzf \
-	gcc \
 	git \
+	grv \
 	hyperfine \
-	httpie \
 	jq \
 	lastpass-cli \
-	man \
 	moreutils \
 	neovim \
 	npm \
-	p7zip-plugins \
 	parallel \
-	plantuml \
-	python python-pip \
-	python3 python3-pip \
-	ruby \
+	py37-httpie \
+	py37-pip \
+	py37-ranger \
+	python37 \
+	ripgrep \
+	tealdeer \
 	the_silver_searcher \
 	tmux \
 	unzip \
 	wget \
+	youtube_dl \
 	zsh
 
-  sudo npm install -g \
+  npm install -g \
 	log-color-highlight \
 	markserv \
 	npm-check
-
-  sudo pip3 install \
-	  visidata openpyxl termdown \
-	  urwid urwid-readline #for jqed
 else
 	echo only dnf based systems supported
 	exit 1

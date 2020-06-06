@@ -1,9 +1,9 @@
-curl -sfL https://git.io/chezmoi | sh -s - -b ~/bin
-~/bin/chezmoi init https://github.com/sschlesier/dotfiles-chezmoi.git
-~/bin/chezmoi apply
+curl -sfL https://git.io/chezmoi | sh  #figure out how to put in /usr/local/bin
+./bin/chezmoi init https://github.com/sschlesier/dotfiles-chezmoi.git
+./bin/chezmoi apply
 
-~/bin/chezmoi source -- remote remove origin
-~/bin/chezmoi source -- remote add origin git@github.com:sschlesier/dotfiles-chezmoi.git
+./bin/chezmoi source -- remote remove origin
+./bin/chezmoi source -- remote add origin git@github.com:sschlesier/dotfiles-chezmoi.git
 # need ssh keys before fetch and setting upstream
 # ~/bin/chezmoi source -- fetch origin
 # ~/bin/chezmoi source -- branch --set-upstream-to=origin/master master
