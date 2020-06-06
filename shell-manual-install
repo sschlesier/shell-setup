@@ -20,11 +20,6 @@ curl --fail --silent --show-error --location \
 	--output ~/bin/grv https://github.com/rgburke/grv/releases/download/v0.3.2/grv_v0.3.2_linux64
 chmod +x ~/bin/grv
 
-#install docker cli
-curl --fail --silent --show-error --location \
-	https://download.docker.com/linux/static/stable/x86_64/docker-19.03.5.tgz | \
-	tar -zxvf - --strip 1 -C ~/bin docker/docker
-
 #install youtube-dl
 curl -L https://yt-dl.org/downloads/latest/youtube-dl -o ~/bin/youtube-dl
 chmod +x ~/bin/youtube-dl
