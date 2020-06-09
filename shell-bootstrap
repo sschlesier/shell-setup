@@ -11,13 +11,13 @@ if type dnf > /dev/null; then
 	dos2unix \
 	entr \
 	exa \
-	file \
 	fd-find \
+	file \
 	fzf \
 	gcc \
 	git \
-	hyperfine \
 	httpie \
+	hyperfine \
 	jq \
 	lastpass-cli \
 	man \
@@ -27,12 +27,12 @@ if type dnf > /dev/null; then
 	p7zip-plugins \
 	parallel \
 	plantuml \
-	python python-pip \
-	python3 python3-pip \
-	ruby \
+	python \
+	ranger \
 	the_silver_searcher \
 	tmux \
 	unzip \
+	visidata \
 	wget \
 	zsh
 
@@ -40,10 +40,6 @@ if type dnf > /dev/null; then
 	log-color-highlight \
 	markserv \
 	npm-check
-
-  sudo pip3 install \
-	  visidata openpyxl termdown \
-	  urwid urwid-readline #for jqed
 else
 	echo only dnf based systems supported
 	exit 1
