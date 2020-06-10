@@ -1,3 +1,5 @@
+#! /usr/bin/env sh
+
 curl -sfL https://git.io/chezmoi | sh -s - -b ~/bin
 ~/bin/chezmoi init https://github.com/sschlesier/dotfiles-chezmoi.git
 ~/bin/chezmoi apply
