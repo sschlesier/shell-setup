@@ -2,14 +2,14 @@
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
 brew install \
-	acpi \
 	bat \
-	bind-utils \
 	dos2unix \
 	entr \
 	exa \
-	fd-find \
+	fd \
 	file \
 	fzf \
 	gcc \
@@ -18,11 +18,9 @@ brew install \
 	hyperfine \
 	jq \
 	lastpass-cli \
-	man \
 	moreutils \
 	neovim \
 	npm \
-	p7zip-plugins \
 	parallel \
 	plantuml \
 	python \
@@ -30,7 +28,6 @@ brew install \
 	the_silver_searcher \
 	tmux \
 	unzip \
-	visidata \
 	wget \
 	zsh
 
