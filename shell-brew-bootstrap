@@ -1,0 +1,41 @@
+#! /bin/bash
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+brew install \
+	acpi \
+	bat \
+	bind-utils \
+	dos2unix \
+	entr \
+	exa \
+	fd-find \
+	file \
+	fzf \
+	gcc \
+	git \
+	httpie \
+	hyperfine \
+	jq \
+	lastpass-cli \
+	man \
+	moreutils \
+	neovim \
+	npm \
+	p7zip-plugins \
+	parallel \
+	plantuml \
+	python \
+	ranger \
+	the_silver_searcher \
+	tmux \
+	unzip \
+	visidata \
+	wget \
+	zsh
+
+
+npm install -g \
+	log-color-highlight \
+	markserv \
+	npm-check
