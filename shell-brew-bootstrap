@@ -4,7 +4,9 @@
 
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
-sudo apt-get install -y build-essential
+sudo	apt-get update -y && \
+	apt-get install -y \
+		build-essential
 
 brew install \
 	bat \
