@@ -31,6 +31,8 @@ brew install \
 	wget \
 	zsh
 
+pip3 install \
+	visidata
 
 npm install -g \
 	log-color-highlight \
