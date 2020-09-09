@@ -4,8 +4,8 @@
 
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
-sudo	apt-get update -y && \
-	apt-get install -y \
+sudo	apt-get update -y
+sudo	apt-get install -y \
 		build-essential
 
 brew install gcc #gcc to help build some of the main pkgs
@@ -26,7 +26,6 @@ brew install \
 	moreutils \
 	neovim \
 	npm \
-	parallel \
 	plantuml \
 	python \
 	ranger \
