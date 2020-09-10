@@ -26,9 +26,7 @@ brew install \
 	moreutils \
 	neovim \
 	npm \
-	plantuml \
 	python \
-	ranger \
 	the_silver_searcher \
 	tmux \
 	unzip \
