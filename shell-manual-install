@@ -1,4 +1,4 @@
-#! /usr/bin/env zsh
+#! /usr/bin/env sh
 
 #install a tldr instance
 curl --fail --silent --show-error --location \
@@ -10,7 +10,7 @@ curl --fail --silent --show-error --location \
 	--output ~/bin/bombardier https://github.com/codesenberg/bombardier/releases/download/v1.2.4/bombardier-linux-amd64
 chmod +x ~/bin/bombardier
 
-#setup defaault ssh params
+#setup defaault ssh config
 curl --fail --silent --show-error --location \
 	--output ~/.ssh/config https://gist.githubusercontent.com/sschlesier/128b3c59ed82034d2fc983ecabdfb4ea/raw/config
 chmod 644 ~/.ssh/config
