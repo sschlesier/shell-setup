@@ -20,10 +20,6 @@ curl --fail --silent --show-error --location \
 	--output ~/bin/grv https://github.com/rgburke/grv/releases/download/v0.3.2/grv_v0.3.2_linux64
 chmod +x ~/bin/grv
 
-#install youtube-dl
-curl -L https://yt-dl.org/downloads/latest/youtube-dl -o ~/bin/youtube-dl
-chmod +x ~/bin/youtube-dl
-
 #install diff-so-fancy
 curl --fail --silent --show-error --location \
 	--output ~/bin/diff-so-fancy https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/diff-so-fancy
