@@ -45,12 +45,13 @@ brew install \
 	wget \
 	zsh
 
-brew install python #this seems to help w/ pip3, not sure why
+brew install python #install python alone seems to help w/ pip3, not sure why
 
 brew tap beeftornado/rmtree
 
 pip3 install \
-	visidata
+	visidata \
+	openpyxl
 
 npm install -g \
 	log-color-highlight \
