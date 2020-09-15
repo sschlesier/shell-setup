@@ -1,46 +1,58 @@
-#! /usr/bin/env sh
+#! /bin/bash
 
 if type dnf > /dev/null; then
-  sudo dnf -y group install \
-	Core
+	sudo dnf groupinstall  -y 'Development Tools'
 
-  sudo dnf -y install \
-	acpi \
+	sudo dnf install -y \
+		git \
+		plantuml
+fi
+
+if type apt-get > /dev/null; then
+	sudo apt-get update -y
+
+	sudo apt-get install -y \
+		build-essential \
+		plantuml
+fi
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+
+brew install gcc #gcc to help build some of the main pkgs
+
+brew install \
 	bat \
-	bind-utils \
 	dos2unix \
 	entr \
 	exa \
-	fd-find \
+	fd \
 	file \
 	fzf \
-	gcc \
 	git \
 	httpie \
 	hyperfine \
 	jq \
 	lastpass-cli \
-	man \
-	moreutils \
 	neovim \
 	npm \
-	p7zip-plugins \
 	parallel \
-	plantuml \
-	python \
-	ranger \
 	the_silver_searcher \
 	tmux \
 	unzip \
-	visidata \
 	wget \
 	zsh
 
-  sudo npm install -g \
+brew install python #this seems to help w/ pip3, not sure why
+
+brew tap beeftornado/rmtree
+
+pip3 install \
+	visidata
+
+npm install -g \
 	log-color-highlight \
 	markserv \
 	npm-check
-else
-	echo only dnf based systems supported
-	exit 1
-fi
