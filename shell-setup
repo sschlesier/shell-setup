@@ -1,4 +1,4 @@
-#! /usr/bin/env sh
+#! /bin/sh
 
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-bootstrap | sh
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-chezmoi | sh
