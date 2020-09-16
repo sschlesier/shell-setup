@@ -39,6 +39,7 @@ brew install \
 	neovim \
 	npm \
 	parallel \
+	shellcheck \
 	the_silver_searcher \
 	tmux \
 	unzip \
