@@ -12,6 +12,7 @@ if type apt-get > /dev/null; then
 	sudo apt-get update -y
 
 	sudo apt-get install -y \
+		git \
 		build-essential \
 		plantuml
 fi
