@@ -1,9 +1,9 @@
 #! /bin/sh
 
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-bootstrap | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-chezmoi | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-antibody | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-vimplug | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-tmux | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-cargo | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/master/shell-manual-install | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-bootstrap | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-chezmoi | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-antibody | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-vimplug | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-tmux | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-cargo | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-manual-install | sh
