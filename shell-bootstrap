@@ -53,7 +53,8 @@ brew tap beeftornado/rmtree
 
 pip3 install \
 	visidata \
-	openpyxl
+	openpyxl \
+	pylint
 
 npm install -g \
 	log-color-highlight \
