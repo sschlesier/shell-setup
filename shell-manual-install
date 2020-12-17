@@ -7,7 +7,7 @@ chmod +x ~/bin/tldr
 
 #bombardier
 curl --fail --silent --show-error --location \
-	--output ~/bin/bombardier https://github.com/codesenberg/bombardier/releases/download/v1.2.4/bombardier-linux-amd64
+	--output ~/bin/bombardier https://github.com/codesenberg/bombardier/releases/download/v1.2.5/bombardier-linux-amd64
 chmod +x ~/bin/bombardier
 
 #setup defaault ssh config
