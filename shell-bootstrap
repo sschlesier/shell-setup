@@ -26,6 +26,7 @@ brew install gcc #gcc to help build some of the main pkgs
 
 brew install \
 	bat \
+	diff-so-fancy \
 	dos2unix \
 	entr \
 	exa \
@@ -33,6 +34,7 @@ brew install \
 	file \
 	fzf \
 	git \
+	grv \
 	httpie \
 	hyperfine \
 	jq \
@@ -41,6 +43,7 @@ brew install \
 	npm \
 	parallel \
 	shellcheck \
+	tldr \
 	the_silver_searcher \
 	tmux \
 	unzip \

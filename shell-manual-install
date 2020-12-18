@@ -1,10 +1,5 @@
 #! /usr/bin/env sh
 
-#install a tldr instance
-curl --fail --silent --show-error --location \
-	--output ~/bin/tldr https://raw.githubusercontent.com/raylee/tldr/master/tldr
-chmod +x ~/bin/tldr
-
 #bombardier
 curl --fail --silent --show-error --location \
 	--output ~/bin/bombardier https://github.com/codesenberg/bombardier/releases/download/v1.2.5/bombardier-linux-amd64
@@ -14,16 +9,3 @@ chmod +x ~/bin/bombardier
 curl --fail --silent --show-error --location \
 	--output ~/.ssh/config https://gist.githubusercontent.com/sschlesier/128b3c59ed82034d2fc983ecabdfb4ea/raw/config
 chmod 644 ~/.ssh/config
-
-#install grv
-curl --fail --silent --show-error --location \
-	--output ~/bin/grv https://github.com/rgburke/grv/releases/download/v0.3.2/grv_v0.3.2_linux64
-chmod +x ~/bin/grv
-
-#install diff-so-fancy
-curl --fail --silent --show-error --location \
-	--output ~/bin/diff-so-fancy https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/diff-so-fancy
-chmod +x ~/bin/diff-so-fancy
-mkdir -p ~/bin/lib
-curl --fail --silent --show-error --location \
-	--output ~/bin/lib/DiffHighlight.pm https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/lib/DiffHighlight.pm
