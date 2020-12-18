@@ -1,5 +1,0 @@
-Dockerfile
-.git/
-.dockerignore
-.gitignore
-update-chezmoi.sh
