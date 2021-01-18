@@ -39,7 +39,6 @@ brew install \
 	hyperfine \
 	jq \
 	lastpass-cli \
-	neovim \
 	npm \
 	parallel \
 	shellcheck \
@@ -47,6 +46,7 @@ brew install \
 	the_silver_searcher \
 	tmux \
 	unzip \
+	vim \
 	wget \
 	zsh
 
