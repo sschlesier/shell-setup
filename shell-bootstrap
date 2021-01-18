@@ -34,7 +34,7 @@ brew install \
 	file \
 	fzf \
 	git \
-	grv \
+	gitui \
 	httpie \
 	hyperfine \
 	jq \
