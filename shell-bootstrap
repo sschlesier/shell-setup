@@ -43,9 +43,10 @@ brew install \
 	lastpass-cli \
 	npm \
 	parallel \
+	rust \
 	shellcheck \
-	tldr \
 	the_silver_searcher \
+	tldr \
 	tmux \
 	unzip \
 	vim \
@@ -65,3 +66,7 @@ npm install -g \
 	log-color-highlight \
 	markserv \
 	npm-check
+
+cargo install dua-cli
+cargo install du-dust
+cargo install verco
