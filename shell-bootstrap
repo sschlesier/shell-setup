@@ -25,6 +25,7 @@ eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 brew install gcc #gcc to help build some of the main pkgs
 
 brew install \
+	antibody \
 	bat \
 	chezmoi \
 	diff-so-fancy \
