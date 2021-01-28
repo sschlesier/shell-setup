@@ -26,6 +26,7 @@ brew install gcc #gcc to help build some of the main pkgs
 
 brew install \
 	bat \
+	chezmoi \
 	diff-so-fancy \
 	dos2unix \
 	entr \
