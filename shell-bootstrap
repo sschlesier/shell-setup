@@ -39,7 +39,6 @@ brew install \
 	httpie \
 	hyperfine \
 	jq \
-	lastpass-cli \
 	npm \
 	parallel \
 	rust \
