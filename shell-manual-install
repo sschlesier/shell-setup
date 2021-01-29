@@ -12,11 +12,12 @@ curl --fail --silent --show-error --location https://github.com/stefan-schroedl/
 #csvquote
 csvsrc=$(mktemp -d)
 git clone https://github.com/dbro/csvquote.git "$csvsrc"
-pushd "$csvsrc"
+curdir=$(pwd)
+cd "$csvsrc"
 make
 mkdir -p "$HOME/bin/csvquote/bin"
 cp csvquote csvheader "$HOME/bin/csvquote/bin"
-popd
+cd "$curdir"
 rm -rf "$csvsrc"
 
 #setup defaault ssh config
