@@ -5,5 +5,4 @@ curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-ch
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-antibody | sh
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-vimplug | sh
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-tmux | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-cargo | sh
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-manual-install | sh
