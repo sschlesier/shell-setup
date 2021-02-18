@@ -48,8 +48,6 @@ brew install \
 	tldr \
 	tmux \
 	unzip \
-	vim \
-	wget \
 	zsh
 
 brew install python #install python alone seems to help w/ pip3, not sure why
