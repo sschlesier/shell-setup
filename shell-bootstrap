@@ -67,5 +67,3 @@ npm install -g \
 	npm-check
 
 cargo install dua-cli
-cargo install du-dust
-cargo install verco
