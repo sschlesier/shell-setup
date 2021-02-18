@@ -5,7 +5,7 @@ if type dnf > /dev/null; then
 
 	sudo dnf install -y \
 		git \
-		plantuml
+		ruby
 fi
 
 if type apt-get > /dev/null; then
