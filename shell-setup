@@ -1,6 +1,7 @@
 #! /bin/sh
 
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-bootstrap | sh
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-chezmoi | sh
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-antibody | sh
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-vimplug | sh
