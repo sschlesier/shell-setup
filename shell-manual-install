@@ -1,10 +1,5 @@
 #! /usr/bin/env sh
 
-#bombardier
-curl --fail --silent --show-error --location \
-	--output ~/bin/bombardier https://github.com/codesenberg/bombardier/releases/download/v1.2.5/bombardier-linux-amd64
-chmod +x ~/bin/bombardier
-
 #tabulator
 curl --fail --silent --show-error --location https://github.com/stefan-schroedl/tabulator/archive/v1.2.1.tar.gz \
 	| tar xz --directory="$HOME/bin"
