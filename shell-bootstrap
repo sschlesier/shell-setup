@@ -14,7 +14,6 @@ if type apt-get > /dev/null; then
 	sudo apt-get install -y \
 		git \
 		build-essential \
-		plantuml \
 		man
 fi
 
@@ -48,6 +47,7 @@ brew install \
 	tldr \
 	tmux \
 	unzip \
+	wget \
 	zsh
 
 brew install python #install python alone seems to help w/ pip3, not sure why
