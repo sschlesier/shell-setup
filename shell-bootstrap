@@ -52,7 +52,8 @@ brew install \
 
 brew install python #install python alone seems to help w/ pip3, not sure why
 
-brew tap beeftornado/rmtree
+brew install beeftornado/rmtree/brew-rmtree
+brew install sschlesier/bombardier/bombardier
 
 pip3 install \
 	visidata \
