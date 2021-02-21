@@ -55,6 +55,7 @@ brew install python #install python alone seems to help w/ pip3, not sure why
 brew install beeftornado/rmtree/brew-rmtree
 brew install sschlesier/bombardier/bombardier
 brew install sschlesier/csvutils/csvquote
+brew install sschlesier/csvutils/tabulator
 
 pip3 install \
 	visidata \

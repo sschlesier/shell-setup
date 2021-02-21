@@ -1,9 +1,5 @@
 #! /usr/bin/env sh
 
-#tabulator
-curl --fail --silent --show-error --location https://github.com/stefan-schroedl/tabulator/archive/v1.2.1.tar.gz \
-	| tar xz --directory="$HOME/bin"
-
 #setup defaault ssh config
 curl --fail --silent --show-error --location \
 	--output ~/.ssh/config https://gist.githubusercontent.com/sschlesier/128b3c59ed82034d2fc983ecabdfb4ea/raw/config
