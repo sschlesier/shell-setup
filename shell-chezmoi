@@ -4,7 +4,7 @@ chezmoi init https://github.com/sschlesier/dotfiles-chezmoi.git
 echo which email do you want to use?
 email=$(printf "scotts@iqmetrix.com\nscott@schlesier.ca" | fzf)
 if [ "$email" != scott@schlesier.ca ]; then
-	sed -i '' "s/scott@schlesier.ca/$email/g" ~/.config/chezmoi/chezmoi.toml
+	sed -i.bak "s/scott@schlesier.ca/$email/g" ~/.config/chezmoi/chezmoi.toml
 fi
 chezmoi apply
 
