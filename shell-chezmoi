@@ -1,8 +1,8 @@
 #! /usr/bin/env sh
 
 chezmoi init https://github.com/sschlesier/dotfiles-chezmoi.git
-echo which email do you want to use?
-email=$(printf "scotts@iqmetrix.com\nscott@schlesier.ca" | fzf)
+email=$( echo which email do you want to use? >&2 && \
+printf "scotts@iqmetrix.com\nscott@schlesier.ca" | fzf)
 if [ "$email" != scott@schlesier.ca ]; then
 	sed -i.bak "s/scott@schlesier.ca/$email/g" ~/.config/chezmoi/chezmoi.toml
 fi
