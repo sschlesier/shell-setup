@@ -1,6 +1,6 @@
 #! /usr/bin/env sh
 
-chezmoi init https://github.com/sschlesier/dotfiles-chezmoi.git
+chezmoi init https://github.com/sschlesier/dotfiles.git
 echo which email do you want to use?
 email=$(printf "scotts@iqmetrix.com\nscott@schlesier.ca" | fzf)
 if [ "$email" != scott@schlesier.ca ]; then
@@ -9,7 +9,7 @@ fi
 chezmoi apply
 
 chezmoi source -- remote remove origin
-chezmoi source -- remote add origin git@github.com:sschlesier/dotfiles-chezmoi.git
+chezmoi source -- remote add origin git@github.com:sschlesier/dotfiles.git
 # need ssh keys before fetch and setting upstream
 # chezmoi source -- fetch origin
 # chezmoi source -- branch --set-upstream-to=origin/master master
