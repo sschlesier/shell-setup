@@ -29,6 +29,7 @@ brew install \
 	bat \
 	chezmoi \
 	diff-so-fancy \
+	dog \
 	dos2unix \
 	entr \
 	exa \
