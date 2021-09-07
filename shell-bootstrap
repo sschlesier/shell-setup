@@ -57,7 +57,6 @@ brew install beeftornado/rmtree/brew-rmtree
 brew install sschlesier/bombardier/bombardier
 brew install sschlesier/csvutils/csvquote
 brew install sschlesier/csvutils/tabulator
-brew install sschlesier/dtrx/dtrx
 
 pip3 install \
 	visidata \
