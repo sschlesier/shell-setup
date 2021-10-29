@@ -42,7 +42,6 @@ brew install \
 	jq \
 	npm \
 	parallel \
-	rust \
 	shellcheck \
 	the_silver_searcher \
 	tldr \
