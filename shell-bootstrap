@@ -17,10 +17,10 @@ if type apt-get > /dev/null; then
 		man
 fi
 
+export HOMEBREW_INSTALL_FROM_API=1
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-export HOMEBREW_INSTALL_FROM_API=1
 
 brew install gcc #gcc to help build some of the main pkgs
 
