@@ -19,44 +19,10 @@ fi
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 
-brew install gcc #gcc to help build some of the main pkgs
-
-brew install \
-	antibody \
-	bat \
-	chezmoi \
-	diff-so-fancy \
-	dog \
-	dos2unix \
-	entr \
-	exa \
-	fd \
-	file \
-	fzf \
-	git \
-	httpie \
-	hyperfine \
-	jq \
-	npm \
-	parallel \
-	rust \
-	shellcheck \
-	the_silver_searcher \
-	tldr \
-	tmux \
-	unzip \
-	wget \
-	zsh
-
-brew install python #install python alone seems to help w/ pip3, not sure why
-
-brew install beeftornado/rmtree/brew-rmtree
-brew install sschlesier/bombardier/bombardier
-brew install sschlesier/csvutils/csvquote
-brew install sschlesier/csvutils/tabulator
+brew bundle
 
 pip3 install \
 	visidata \
@@ -67,5 +33,3 @@ npm install -g \
 	log-color-highlight \
 	markserv \
 	npm-check
-
-cargo install dua-cli
