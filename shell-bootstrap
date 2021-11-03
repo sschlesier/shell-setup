@@ -20,7 +20,19 @@ fi
 export HOMEBREW_INSTALL_FROM_API=1
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# setup homebrew env
+brewpaths=( "/home/linuxbrew/.linuxbrew/bin/brew" \
+	"$HOME/.linuxbrew/bin/brew" \
+	"/usr/local/bin/brew" \
+	"/opt/homebrew/bin/brew" )
+
+for pth in "${brewpaths[@]}";
+do
+	if [[ -x "$pth" ]]; then
+		eval "$($pth shellenv)"
+		break
+	fi
+done
 
 brew bundle
 
