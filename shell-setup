@@ -1,8 +1,8 @@
 #! /bin/sh
 
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/brewfile/shell-bootstrap | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-bootstrap | bash
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/brewfile/shell-chezmoi | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/brewfile/shell-antibody | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/brewfile/shell-vimplug | sh
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/brewfile/shell-tmux | sh
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-chezmoi | bash
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-antibody | bash
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-vimplug | bash
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-tmux | bash
