@@ -1,4 +1,4 @@
 #! /usr/bin/env sh
 
-antibody bundle < ~/.zsh/pre_compinit_plugins.txt
-antibody bundle < ~/.zsh/post_compinit_plugins.txt
+antibody bundle < ~/.config/zsh/pre_compinit_plugins.txt
+antibody bundle < ~/.config/zsh/post_compinit_plugins.txt

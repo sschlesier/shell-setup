@@ -8,11 +8,11 @@ if [ "$email" != scott@schlesier.ca ]; then
 fi
 chezmoi apply
 
-chezmoi source -- remote remove origin
-chezmoi source -- remote add origin git@github.com:sschlesier/dotfiles.git
+chezmoi git -- remote remove origin
+chezmoi git -- remote add origin git@github.com:sschlesier/dotfiles.git
 # need ssh keys before fetch and setting upstream
-# chezmoi source -- fetch origin
-# chezmoi source -- branch --set-upstream-to=origin/master master
+# chezmoi git -- fetch origin
+# chezmoi git -- branch --set-upstream-to=origin/master master
 
 #create ~/.ssh so ssh-agent doesn't whine
 mkdir -p ~/.ssh
