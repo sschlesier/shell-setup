@@ -21,7 +21,6 @@ fi
 
 # setup homebrew env
 brewpaths=( "/home/linuxbrew/.linuxbrew/bin/brew" \
-	"$HOME/.linuxbrew/bin/brew" \
 	"/usr/local/bin/brew" \
 	"/opt/homebrew/bin/brew" )
 
@@ -33,8 +32,36 @@ do
 	fi
 done
 
-
-brew bundle
+brew install \
+	antibody \
+	bat \
+	chezmoi \
+	diff-so-fancy \
+	dog \
+	dos2unix \
+	entr \
+	exa \
+	fd \
+	file \
+	fzf \
+	git \
+	httpie \
+	hyperfine \
+	jq \
+	npm \
+	parallel \
+	python \
+	shellcheck \
+	the_silver_searcher \
+	tldr \
+	tmux \
+	unzip \
+	wget \
+	zsh \
+	beeftornado/rmtree/brew-rmtree \
+	sschlesier/bombardier/bombardier \
+	sschlesier/csvutils/csvquote \
+	sschlesier/csvutils/tabulator
 
 pip3 install \
 	visidata \
