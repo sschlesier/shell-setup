@@ -49,7 +49,6 @@ brew install \
 	httpie \
 	hyperfine \
 	jq \
-	npm \
 	parallel \
 	python \
 	shellcheck \
@@ -69,7 +68,7 @@ pip3 install \
 	openpyxl \
 	pylint
 
-npm install -g \
-	log-color-highlight \
-	markserv \
-	npm-check
+# npm install -g \
+# 	log-color-highlight \
+# 	markserv \
+# 	npm-check
