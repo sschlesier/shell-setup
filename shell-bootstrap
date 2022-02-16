@@ -49,6 +49,7 @@ brew install \
 	httpie \
 	hyperfine \
 	jq \
+	lazygit \
 	nvm \
 	parallel \
 	python \
