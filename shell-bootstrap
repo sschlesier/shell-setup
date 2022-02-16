@@ -18,7 +18,7 @@ if type apt-get > /dev/null; then
 fi
 
 # export HOMEBREW_INSTALL_FROM_API=1
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # setup homebrew env
 brewpaths=( "/home/linuxbrew/.linuxbrew/bin/brew" \
