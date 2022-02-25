@@ -54,10 +54,10 @@ brew install \
 	parallel \
 	python \
 	shellcheck \
+	sponge \
 	the_silver_searcher \
 	tldr \
 	tmux \
-	unzip \
 	wget \
 	zsh \
 	beeftornado/rmtree/brew-rmtree \
