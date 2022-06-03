@@ -58,7 +58,6 @@ brew install \
 	sponge \
 	the_silver_searcher \
 	tldr \
-	tmux \
 	wget \
 	zsh \
 	beeftornado/rmtree/brew-rmtree \
