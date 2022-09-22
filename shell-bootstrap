@@ -46,6 +46,7 @@ brew install \
 	fd \
 	file \
 	fzf \
+	gh \
 	git \
 	httpie \
 	hyperfine \
