@@ -38,7 +38,6 @@ brew install \
 	bat \
 	chezmoi \
 	diff-so-fancy \
-	direnv \
 	dog \
 	dos2unix \
 	entr \
