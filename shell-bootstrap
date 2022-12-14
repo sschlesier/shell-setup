@@ -17,7 +17,7 @@ if type apt-get > /dev/null; then
 		man
 fi
 
-# export HOMEBREW_INSTALL_FROM_API=1
+export HOMEBREW_INSTALL_FROM_API=1
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # setup homebrew env
@@ -28,6 +28,7 @@ brewpaths=( "/home/linuxbrew/.linuxbrew/bin/brew" \
 for pth in "${brewpaths[@]}";
 do
 	if [[ -x "$pth" ]]; then
+		echo found brew at "$pth"
 		eval "$($pth shellenv)"
 		break
 	fi
@@ -44,6 +45,7 @@ brew install \
 	exa \
 	fd \
 	file \
+	font-fira-code-nerd-font \
 	fzf \
 	gh \
 	git \
