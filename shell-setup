@@ -3,6 +3,6 @@
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-bootstrap | bash
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-chezmoi | bash
-curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-antibody | bash
+curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-antidote | bash
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-vimplug | bash
 curl -sfL https://raw.githubusercontent.com/sschlesier/shell-setup/main/shell-tmux | bash

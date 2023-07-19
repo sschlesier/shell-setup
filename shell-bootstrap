@@ -35,7 +35,7 @@ do
 done
 
 brew install \
-	antibody \
+	antidote \
 	bat \
 	chezmoi \
 	diff-so-fancy \
