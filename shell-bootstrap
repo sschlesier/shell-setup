@@ -41,7 +41,7 @@ brew install \
 	diff-so-fancy \
 	dos2unix \
 	entr \
-	exa \
+	eza \
 	fd \
 	file \
 	font-fira-code-nerd-font \
