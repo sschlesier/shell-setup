@@ -62,7 +62,6 @@ brew install \
 	tldr \
 	wget \
 	zsh \
-	beeftornado/rmtree/brew-rmtree \
 	sschlesier/bombardier/bombardier \
 	sschlesier/csvutils/csvquote \
 	sschlesier/csvutils/tabulator
