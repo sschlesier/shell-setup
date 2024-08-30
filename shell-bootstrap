@@ -44,6 +44,7 @@ brew install \
 	eza \
 	fd \
 	file \
+  fnm \
 	font-fira-code-nerd-font \
 	fzf \
 	gh \
@@ -53,7 +54,6 @@ brew install \
 	jq \
 	lazygit \
   lf \
-	nvm \
 	parallel \
 	python \
 	shellcheck \
