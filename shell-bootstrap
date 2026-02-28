@@ -1,77 +1,23 @@
-#! /bin/bash
+#!/bin/bash
 
-if type dnf > /dev/null; then
-	sudo dnf groupinstall  -y 'Development Tools'
-
-	sudo dnf install -y \
-		git \
-		libxcrypt-compat
+# 1. Xcode Command Line Tools
+if ! xcode-select -p &>/dev/null; then
+	echo "Installing Xcode Command Line Tools..."
+	xcode-select --install
+	echo "Please complete the Xcode CLT installation, then re-run this script."
+	exit 1
 fi
 
-if type apt-get > /dev/null; then
-	sudo apt-get update -y
-
-	sudo apt-get install -y \
-		git \
-		build-essential \
-		man
+# 2. Homebrew (Apple Silicon)
+if ! /opt/homebrew/bin/brew --version &>/dev/null; then
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-export HOMEBREW_INSTALL_FROM_API=1
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# setup homebrew env
-brewpaths=( "/home/linuxbrew/.linuxbrew/bin/brew" \
-	"/usr/local/bin/brew" \
-	"/opt/homebrew/bin/brew" )
+# 3. chezmoi
+brew install chezmoi
 
-for pth in "${brewpaths[@]}";
-do
-	if [[ -x "$pth" ]]; then
-		echo found brew at "$pth"
-		eval "$($pth shellenv)"
-		break
-	fi
-done
-
-brew install \
-	antidote \
-	bat \
-	chezmoi \
-	diff-so-fancy \
-	dos2unix \
-	entr \
-	eza \
-	fd \
-	file \
-  fnm \
-	font-fira-code-nerd-font \
-	fzf \
-	gh \
-	git \
-	httpie \
-	hyperfine \
-	jq \
-	lazygit \
-  lf \
-	parallel \
-	python \
-	shellcheck \
-	sponge \
-	the_silver_searcher \
-	tldr \
-	wget \
-	zsh \
-	sschlesier/bombardier/bombardier \
-	sschlesier/csvutils/csvquote \
-	sschlesier/csvutils/tabulator
-
-pip3 install \
-	visidata \
-	openpyxl \
-	pylint
-
-# npm install -g \
-# 	log-color-highlight \
-# 	markserv \
-# 	npm-check
+# 4. Dotfiles
+chezmoi init https://github.com/sschlesier/dotfiles.git
+chezmoi apply
