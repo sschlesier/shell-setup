@@ -1,4 +1,4 @@
-Scripts I use to setup my shell environment on a new machine.
+Scripts I use to set up my shell environment on a new machine.
 
 Give it a go:
 
